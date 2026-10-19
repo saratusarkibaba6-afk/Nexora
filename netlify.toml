@@ -1,0 +1,14 @@
+[build]
+  command = "unzip -o NEXORA_live_AI_backend_package.zip -d ."
+  publish = "nexora_ai"
+  functions = "nexora_ai/netlify/functions"
+
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
+[[redirects]]
+  from = "/health"
+  to = "/.netlify/functions/health"
+  status = 200
